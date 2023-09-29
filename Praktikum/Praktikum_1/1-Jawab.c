@@ -1,14 +1,23 @@
+/*  Nama : Raden Francisco Trianto Bratadiningrat
+    NIM : 13522091
+    Soal No : 1
+*/
+
 #include <stdio.h>
 
 /* ========== Awnser ========== */
 int sharuru(int x, int y){
-    /* x is 4 bit from the back */
-    /* y is 4 bit from the front */
     /* where: front -> 10101010 <- back*/
+    /* take 4 bit from the back of x */
+    /* take 4 bit from the front of y */
+    
     /* 0x0F = 00001111 */
-    x = x & 0x0F; 
+    x = x & 0x0F;  
+    // make so that the front 4 bit is 0
+    
     /* 0xF0 = 11110000 */
-    y = y & 0xF0;
+    y = y & 0xF0; 
+    // make so that the back 4 bit is 0
     return (x | y);
 }
 /* ============================ */
