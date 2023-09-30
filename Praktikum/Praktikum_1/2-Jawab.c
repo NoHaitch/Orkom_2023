@@ -1,13 +1,14 @@
 /*  Nama : Raden Francisco Trianto Bratadiningrat
     NIM : 13522091
-    Soal No : 1
+    Soal No : 2
 */
 
 #include <stdio.h>
 
 /* ========== Awnser ========== */
 int vampire(int x, int y){
-    // XOR
+    // XNOR
+    // XOR but negated
     int a = x & y;
     int b = ~x & ~y;
     return (a|b);
