@@ -20,18 +20,42 @@ unsigned int aidoru_shinetai(unsigned int a){
 /* ============================ */
 
 /* ========== Driver ========== */
-int main(){
-    int result1 = aidoru_shinetai(0b1000);
-    int result2 = aidoru_shinetai(0b0001);
-    int result3 = aidoru_shinetai(0b1010);
-    int result4 = aidoru_shinetai(0b0101);
+unsigned int swapBits(unsigned int num) {
+    // Extract bits at positions 1 and 4
+    unsigned int bit1 = (num >> 1) & 1;
+    unsigned int bit4 = (num >> 4) & 1;
 
-    printf("Result 1: %d 0x%02X\n", result1,result1); // Output:  720897 // 0b0001
-    printf("Result 2: %d 0x%02X\n", result2,result2); // Output:  724992 // 0b1000
-    printf("Result 3: %d 0x%02X\n", result3,result3); // Output:  720913 // 0b0011
-    printf("Result 4: %d 0x%02X\n", result4,result4); // Output:  725248 // 0b1100
+    // Clear bits at positions 1 and 4
+    num &= ~(1 << 1);
+    num &= ~(1 << 4);
+
+    // Set bits at positions 1 and 4 with the swapped values
+    num |= (bit1 << 4);
+    num |= (bit4 << 1);
+
+    return num;
 }
 
+int main() {
+    // Examples
+    unsigned int input1 = 0b1000;
+    unsigned int output1 = swapBits(input1);
+    printf("Input: 0b%04x, Output: 0b%04x\n", input1, output1);
+
+    unsigned int input2 = 0b0001;
+    unsigned int output2 = swapBits(input2);
+    printf("Input: 0b%04x, Output: 0b%04x\n", input2, output2);
+
+    unsigned int input3 = 0b1010;
+    unsigned int output3 = swapBits(input3);
+    printf("Input: 0b%04x, Output: 0b%04x\n", input3, output3);
+
+    unsigned int input4 = 0b0101;
+    unsigned int output4 = swapBits(input4);
+    printf("Input: 0b%04x, Output: 0b%04x\n", input4, output4);
+
+    return 0;
+}
 /*
 test case 1:
    0b1000   --> 00001011'00010000'00000000
