@@ -13,7 +13,7 @@ int ghost_rule(int n){
     int res = ~((powOf2 | (~powOf2 + 1)) >> 31) & 1;
     // Do ! on powOf2 so that when n is power of 2, res = 1 else 0
     // If n is 0 than if0 = 0 else if0 = ~0
-    int if0 = (n^ (~n+1) & (~n+1)) >> 31;
+    int if0 = ((n^ (~n+1)) & (~n+1)) >> 31;
     return if0 & res;
 }
 /* ============================ */
