@@ -6,35 +6,17 @@
 #include <stdio.h>
 
 /* ========== Awnser ========== */
-unsigned int aidoru_shinetai(unsigned int a){
-    int bit1 = (a >> 1) & 1; // bit at position 1
-    int bit4 = (a >> 4) & 1; // bit at position 4
+int aidoru_shinetai(int a){
+    int bit1 = (a >> 3) & 1; // bit at position 1
+    int bit4 = (a >> 0) & 1; // bit at position 4
 
-    // Clear bits at positions 1 and 4, making bit at 1 and 4, into 0
-    a = a & (~(1 << 1)) & (~(1 << 4));
-
-    // Set bits at positions 1 and 4 with swapped values
-    a = a | (bit1 << 4) | (bit4 << 1);
+    a = a & (~(1 << 3));
+    a = a & (~(1 << 0));  
+    a = a | (bit1 << 0);
+    a = a | (bit4 << 3);
     return a;
 }
 /* ============================ */
-
-/* ========== Driver ========== */
-unsigned int swapBits(unsigned int num) {
-    // Extract bits at positions 1 and 4
-    unsigned int bit1 = (num >> 1) & 1;
-    unsigned int bit4 = (num >> 4) & 1;
-
-    // Clear bits at positions 1 and 4
-    num &= ~(1 << 1);
-    num &= ~(1 << 4);
-
-    // Set bits at positions 1 and 4 with the swapped values
-    num |= (bit1 << 4);
-    num |= (bit4 << 1);
-
-    return num;
-}
 
 int main() {
     // Examples
