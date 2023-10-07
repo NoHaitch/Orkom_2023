@@ -1,5 +1,4 @@
 int oshama_scramble(unsigned uf){
-    int sign = (uf >> 31) & 1;
     int exp = (uf >> 23) & 0xFF;
     int e = exp - 0x7F;
     int temp;
