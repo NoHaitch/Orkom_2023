@@ -24,6 +24,3 @@ NIM: 13522091;1a746dd2        // deluxe 7
 NIM: 13522091;8f504760        // deluxe 8
 NIM: 13522091;5c5574f4        // deluxe 9
 NIM: 13522091;b45a5924        // deluxe 10
-
-Orkom3{04d_im_g3tTing_on_tHe_bu5_to_th3_o7heR_w0rLd_see_ya_2efea4dbdc9e3660}
-Orkom3{05d_saUn4_teRtawa_kec1l_meLih4t_k3adaAn_diRimu_s3karang_b6c04db8922dbd4f}
