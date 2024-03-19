@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Mata Kuliah IF2130 - Organisasi dan Arsitektur Komputer 2023</h1>
+<h1>Mata Kuliah IF2130 - Organisasi dan Arsitektur Komputer 2023/2024</h1>
 Semua program, materi dan data Mata Kuliah IF2130 - Organisasi dan Arsitektur Komputer   
 </div> 
 
